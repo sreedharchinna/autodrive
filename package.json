@@ -1,0 +1,11 @@
+{
+  "name": "autodrive",
+  "version": "0.0.1",
+  "description": "auto create your automation suite.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sreedhar <sreedharchinna@gmail.com>",
+  "license": "ISC"
+}
