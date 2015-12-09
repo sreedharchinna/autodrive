@@ -1,4 +1,9 @@
-var lodash = require('lodash');
-exports.printMsg = function() {
-    console.log("This is a message from the Autodrive module.");
-}
+var _ = require("underscore");
+var autodrive = {
+    between: function(low, high){
+        return _.random(low, high);
+    }
+    
+};
+
+module.exports = autodrive;
