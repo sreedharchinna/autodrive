@@ -9,6 +9,7 @@
   "author": "sreedhar <sreedharchinna@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "selenium-webdriver": "^2.48.2",
     "underscore": "^1.8.3"
   }
 }
