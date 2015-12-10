@@ -1,0 +1,18 @@
+{
+    "googleSearch": {
+        "url": "http://www.google.com",
+        "title": "Google",
+        "log": "loaded google web site.",
+		"children": {
+            "child1":{
+                "input" : {
+        
+                }
+                
+                
+            },
+            "clild2":{
+            
+            }
+        }        
+}
