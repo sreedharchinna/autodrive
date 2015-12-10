@@ -4,7 +4,7 @@
   "description": "auto create your automation suite.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "node test/test.js"
   },
   "author": "sreedhar <sreedharchinna@gmail.com>",
   "license": "ISC",
