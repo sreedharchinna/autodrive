@@ -2,7 +2,7 @@
   "name": "autodrive",
   "version": "0.0.1",
   "description": "auto create your automation suite.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "node test/test.js"
   },
