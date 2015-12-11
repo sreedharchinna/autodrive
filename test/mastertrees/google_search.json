@@ -1,18 +1,22 @@
 {
     "googleSearch": {
-        "url": "http://www.google.com",
-        "title": "Google",
+        "id": 1,
+        "action": "loadurl",
+        "address": "http://www.google.com",        
+        "postchecks": { "Title": "Google" },
         "log": "loaded google web site.",
-		"children": {
-            "child1":{
-                "input" : {
+		"children": [
+            
+            "login":{
+                "id": 2,
+                "action" : {
         
-                }
-                
-                
+                }   
             },
             "clild2":{
             
             }
-        }        
+        ]
+        }
+    }
 }
