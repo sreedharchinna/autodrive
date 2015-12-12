@@ -6,7 +6,8 @@
         "postchecks": { "Title": "Google" },
         "log": "loaded google web site.",
 		"children": [
-            
+                             {
+			     "address" : { "textbox" : 
             "login":{
                 "id": 2,
                 "action" : {
