@@ -1,18 +1,25 @@
 {
     "googleSearch": {
         "id": 1,
-        Given: { url: "http://www.google.com"},
-        When: "loadurl",
-        Then: { title: "Google" },
-		children: [
+        "given": [
+                  { 
+                      "type" : "url",
+                      "loc": "http://www.google.com"
+                  }],
+        "when": "loadurl",                      
+        "then": { "title": "Google" },
+		"children": [
                     {
-                        id:
-                        
-                        
-                    },
-                    {
-                
+                        "id": 2,
+                        "given": [{ "type": "textbox",
+                                    "loc": "id:q",
+                                    "value": "hello"}],
+                        "when": [{ "type": "button",
+                                   "loc": "id:b"}
+                                 ],
+                        "then": { "title": "this is title"}                                   
+                                    
                     }
         ]
-        }
+    }
 }
