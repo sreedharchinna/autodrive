@@ -1,23 +1,12 @@
 {
     "googleSearch": {
-        "id": 1,
-        "action": "loadurl",
-        "address": "http://www.google.com",        
-        "postchecks": { "Title": "Google" },
-        "log": "loaded google web site.",
-		"children": [
-                             {
-			     "address" : { "textbox" : 
-            "login":{
-                "id": 2,
-                "action" : {
-        
-                }   
-            },
-            "clild2":{
-            
-            }
+        id: 1,
+        Given: { url: "http://www.google.com"},
+        When: "loadurl",
+        Then: { title: "Google" },
+		children: [
+                 
+			     
         ]
         }
     }
-}
