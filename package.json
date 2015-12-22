@@ -1,7 +1,7 @@
 {
   "name": "autodrive",
-  "version": "0.0.1",
-  "description": "auto create your automation suite.",
+  "version": "0.0.2",
+  "description": "This is a JSON based Selenium automation framework with ability to create maps and UI paths.",
   "main": "app.js",
   "scripts": {
     "test": "node test/test.js"
@@ -9,6 +9,7 @@
   "author": "sreedhar <sreedharchinna@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "json-parser": "^1.1.5",
     "selenium-webdriver": "^2.48.2"
   }
 }
