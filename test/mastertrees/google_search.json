@@ -4,9 +4,10 @@
         "given": [
                   { 
                       "type" : "url",
-                      "loc": "http://www.google.com"
-                  }],
-        "when": "loadurl",                      
+                      "loc": "http://www.google.com",
+                      "action": "loadurl"
+                      
+                  }],        
         "then": { "title": "Google" },
 		"children": [
                     {

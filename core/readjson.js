@@ -1,5 +1,5 @@
 var core = {
-    readJson: function(){
+    readJson: function(jsonfile, step){
         console.log("Inside 'readJson' function");
         return true;
     }    
