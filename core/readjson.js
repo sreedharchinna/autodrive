@@ -1,30 +1,23 @@
 var parser = require('json-parser');
 var fs = require('fs');
 var core = {
-    readJson: function(jsonfile, step){
+    readJson: function(jsonfile){
         
         console.log("Inside 'readJson' function");
         console.log("JSON file :", jsonfile);
-        console.log("Step id :", step);
         
-        var jsonData;
         //Reading json file.
-        fs.readFile(jsonfile, 'utf8', function (error,jsonData){
-            if(jsonData !== null){
-                console.log("json data ",jsonData);                
-            }
-             
-            if(error !== null){
-                console.log("error ",error);   
-            }            
-            return true;
-        });
-        console.log("xxx");
-        console.log(jsonData);
-        //var object = parser.parse(content);
-        //console.log(object);
-        return true;
-    }    
+        var jsobject;
+        var jsonData = fs.readFileSync(jsonfile, 'utf8');
+        if(jsonData == null){
+            console.error("json data not present");
+        }else{
+            console.log("json data ",jsonData);          
+            jsobject = parser.parse(jsonData);
+            console.log(jsobject);
+            console.log(parser);
+        }   
+        return jsobject;
+    }
 };
-
 module.exports = core;
