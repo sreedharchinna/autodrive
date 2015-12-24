@@ -14,10 +14,19 @@ var core = {
         }else{
             console.log("json data ",jsonData);          
             jsobject = parser.parse(jsonData);
-            console.log(jsobject);            
-            //for(var exKey in jsobject) {
-                console.log("value:"+jsobject.googleSearch.id);
-            //}
+            console.log(jsobject);
+            
+            for(var pathKey in jsobject) {
+                console.log("key is "+pathKey);
+                console.log("value: "+jsobject[pathKey].id);
+                console.log("value: "+jsobject[pathKey].children[0].id);
+                //console.log("value: "+jsobject[pathKey].children[1].id);
+                if(jsobject.hasOwnProperty(pathKey)){
+                    console.log("has key".pathKey);
+                }else{
+                    console.log("not there");
+                }                
+            }            
         }   
         return jsobject;
     }
