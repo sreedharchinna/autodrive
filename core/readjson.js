@@ -14,8 +14,10 @@ var core = {
         }else{
             console.log("json data ",jsonData);          
             jsobject = parser.parse(jsonData);
-            console.log(jsobject);
-            console.log(parser);
+            console.log(jsobject);            
+            //for(var exKey in jsobject) {
+                console.log("value:"+jsobject.googleSearch.id);
+            //}
         }   
         return jsobject;
     }
