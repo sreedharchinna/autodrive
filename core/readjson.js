@@ -19,13 +19,11 @@ var core = {
             for(var pathKey in jsobject) {
                 console.log("key is "+pathKey);
                 console.log("value: "+jsobject[pathKey].id);
-                console.log("value: "+jsobject[pathKey].children[0].id);
-                //console.log("value: "+jsobject[pathKey].children[1].id);
-                if(jsobject.hasOwnProperty(pathKey)){
-                    console.log("has key".pathKey);
-                }else{
-                    console.log("not there");
-                }                
+                for(var ch in jsobject[pathKey].children){
+                    console.log(ch[0].id);
+                }
+                //console.log("value: "+jsobject[pathKey].children[0].id);
+                //console.log("value: "+jsobject[pathKey].children[1].id);                
             }            
         }   
         return jsobject;
