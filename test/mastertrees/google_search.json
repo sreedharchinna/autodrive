@@ -1,6 +1,6 @@
 {
     "googleSearch": {
-        "id": 1,
+        "id": 2,
         "given": [
                   { 
                       "type" : "url",
@@ -8,7 +8,7 @@
                       "action": "loadurl"
                       
                   }],        
-        "then": { "title": "Google" },
+        "then": [{ "title": "Google" }],
 		"children": [
                     {
                         "id": 2,
@@ -18,7 +18,7 @@
                         "when": [{ "type": "button",
                                    "loc": "id:b"}
                                  ],
-                        "then": { "title": "this is title"}                                   
+                        "then": [{ "title": "this is title"}]                                 
                                     
                     }
         ]
