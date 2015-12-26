@@ -19,9 +19,12 @@ var core = {
             for(var pathKey in jsobject) {
                 console.log("key is "+pathKey);
                 console.log("value: "+jsobject[pathKey].id);
-                for(var ch in jsobject[pathKey].children){
-                    console.log(ch[0].id);
+                //console.log(jsobject[pathKey].children.length);
+                if("children" in jsobject[pathKey]){
+                    console.log("children exists");
+                    console.log("Number of children"+jsobject[pathKey].children.length);
                 }
+//              if(jsobject[pathKey].children.length)
                 //console.log("value: "+jsobject[pathKey].children[0].id);
                 //console.log("value: "+jsobject[pathKey].children[1].id);                
             }            
