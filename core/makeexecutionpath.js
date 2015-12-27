@@ -1,4 +1,4 @@
-var jr = require('.//readjson.js');
+var jr = require('.//readjson');
 var util = require('util');
 var path = {
     makePath: function(jsonfile, step){

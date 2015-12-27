@@ -1,4 +1,4 @@
-var path = require('.//core//makeexecutionpath.js');
+var path = require('.//core//makeexecutionpath');
 
 var autodrive = {    
     execute: function(jsonfile, step){
