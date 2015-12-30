@@ -33,6 +33,28 @@
                 "title": "this is title"
                 }
             ]
+            },
+            {
+            "id": 3,
+            "given": [
+                {
+                "type": "textbox",
+                "loc": "id:q",
+                "value": "hello"
+                }
+            ],
+            "when": [
+                    {
+                "type": "button",
+                "loc": "id:b"
+                }
+            ],
+            "then": [
+                {
+                "title": "this is title"
+                }
+            ]
             }
+      
     ]
 }
