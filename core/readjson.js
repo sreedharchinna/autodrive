@@ -12,9 +12,9 @@ var core = {
         if(jsonData == null){
             console.error("json data not present");
         }else{
-            console.log("json data ",jsonData);          
+            //console.log("json data ",jsonData);          
             jsobject = parser.parse(jsonData);
-            console.log(jsobject);
+            //console.log(jsobject);
         }   
         return jsobject;
     }

@@ -1,26 +1,38 @@
 {
-    "googleSearch": {
-        "id": 2,
-        "given": [
-                  { 
-                      "type" : "url",
-                      "loc": "http://www.google.com",
-                      "action": "loadurl"
-                      
-                  }],        
-        "then": [{ "title": "Google" }],
-		"children": [
-                    {
-                        "id": 2,
-                        "given": [{ "type": "textbox",
-                                    "loc": "id:q",
-                                    "value": "hello"}],
-                        "when": [{ "type": "button",
-                                   "loc": "id:b"}
-                                 ],
-                        "then": [{ "title": "this is title"}]                                 
-                                    
-                    }
-        ]
+  "id": 1,
+  "given": [
+    {
+      "type": "url",
+      "loc": "http://www.google.com",
+      "action": "loadurl"
     }
+  ],
+  "then": [
+    {
+      "title": "Google"
+    }
+  ],
+  "next": [
+            {
+            "id": 2,
+            "given": [
+                {
+                "type": "textbox",
+                "loc": "id:q",
+                "value": "hello"
+                }
+            ],
+            "when": [
+                    {
+                "type": "button",
+                "loc": "id:b"
+                }
+            ],
+            "then": [
+                {
+                "title": "this is title"
+                }
+            ]
+            }
+    ]
 }
