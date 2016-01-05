@@ -11,9 +11,9 @@ var path = {
         
         console.log(jsobject);
         //console.log(Object.keys(jsobject));
-        parseObj = jsobject;        
+        var parseObj = jsobject;        
         do {
-            console.log("-----------------------------------\n\n");
+            console.log("\n\n-----------------------------------\n\n");
             console.log("Current Object :" + parseObj);
             tmpArr = Object.keys(parseObj);
             for (var index in tmpArr){
