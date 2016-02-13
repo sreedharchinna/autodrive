@@ -20,6 +20,9 @@ var Step = function () {
     this.getStep = function () {
         return this.data;  
     }
+    this.getID = function () {
+        return this.data.id;  
+    }
     this.getParentID = function () {
         return this.data.parent_id;    
     }

@@ -14,6 +14,7 @@ var path = {
             containsNext = false, 
             depth = 0, 
             index = 0, 
+            allSteps = [],
             chain = [],
             parent_id_value,
             to_parse = [],
@@ -26,7 +27,7 @@ var path = {
             tmpArr = Object.keys(parseObj);
         
         
-        chain.push(step({
+        allSteps.push(step({
                         is_root:true,
                         is_leaf:false,
                         id: parseObj.id,
@@ -35,12 +36,21 @@ var path = {
                         then: parseObj.then,
                         parent_id:null
                     }));
-        console.log(chain[0].getStep());
+        console.log(allSteps[0].getStep());
         parent_ids.push(parseObj.id);
         
         //exit if parent step does not have children
         if(!parseObj.next){
-            return true;
+            chain.push(step({
+                        is_root:true,
+                        is_leaf:true,
+                        id: parseObj.id,
+                        given: parseObj.given,
+                        when: parseObj.when,
+                        then: parseObj.then,
+                        parent_id:null
+                    }));
+            return chain;
         }
         
         parseObj = parseObj.next;
@@ -59,7 +69,7 @@ var path = {
                     is_leaf_bool = true;
                 }
                 
-                chain.push(step({
+                allSteps.push(step({
                         is_root:false,
                         is_leaf:is_leaf_bool,
                         id: parseObj[i].id,
@@ -78,12 +88,23 @@ var path = {
         
         
         
-        console.log("In the end, number of steps collected is "+chain.length);
-        
+        console.log("In the end, number of steps collected is "+allSteps.length);
+        var tempID = tostep;
+        do{
+            for(var i=0;i<allSteps.length;i++){
+                if(allSteps[i].getID() == tempID){
+                    console.log("ID present in the steps"+allSteps[i].getStep());
+                    chain.push(allSteps[i]);
+                    tempID = allSteps[i].getStep().parent_id;
+                }               
+            }
+        }while(tempID);
+        console.log("In the end, number of steps in chain collected is "+chain.length);
         for(var i=0;i<chain.length;i++){
-            console.log(chain[i].getStep());
+            console.log(chain[i].getStep());                       
         }
-
+        chain.reverse();
+        return chain;
     }
 };
 module.exports = path;
