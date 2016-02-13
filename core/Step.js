@@ -1,9 +1,12 @@
 var Step = function () {
     this.data = {
+        is_root:false,
+        is_leaf:false,
         id: null,
         given: null,
         when: null,
-        then: null
+        then: null,
+        parent_id:null
     };
     
     this.fill = function (info) {
@@ -16,7 +19,10 @@ var Step = function () {
     
     this.getStep = function () {
         return this.data;  
-    };    
+    }
+    this.getParentID = function () {
+        return this.data.parent_id;    
+    }
 };
 
 module.exports = function (info) {
