@@ -6,8 +6,7 @@ var path = {
         
         util.log("Inside 'makeexecutionpath' function");
         util.log("JSON file :", jsonfile);
-        util.log("Step id :", step);
-        
+                
         var jsobject = jr.readJson(jsonfile), 
             keyFound = false, 
             containsID = false, 
@@ -20,8 +19,8 @@ var path = {
             to_parse = [],
             parent_ids = [];
         
-        console.log(jsobject);
-        console.log(Object.keys(jsobject));
+//        console.log(jsobject);
+//        console.log(Object.keys(jsobject));
         
         var parseObj = jsobject,
             tmpArr = Object.keys(parseObj);
@@ -36,7 +35,7 @@ var path = {
                         then: parseObj.then,
                         parent_id:null
                     }));
-        console.log(allSteps[0].getStep());
+//        console.log(allSteps[0].getStep());
         parent_ids.push(parseObj.id);
         
         //exit if parent step does not have children
@@ -93,16 +92,16 @@ var path = {
         do{
             for(var i=0;i<allSteps.length;i++){
                 if(allSteps[i].getID() == tempID){
-                    console.log("ID present in the steps"+allSteps[i].getStep());
+//                    console.log("ID present in the steps"+allSteps[i].getStep());
                     chain.push(allSteps[i]);
                     tempID = allSteps[i].getStep().parent_id;
                 }               
             }
         }while(tempID);
         console.log("In the end, number of steps in chain collected is "+chain.length);
-        for(var i=0;i<chain.length;i++){
-            console.log(chain[i].getStep());                       
-        }
+//        for(var i=0;i<chain.length;i++){
+//            console.log(chain[i].getStep());                       
+//        }
         chain.reverse();
         return chain;
     }
