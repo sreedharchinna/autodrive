@@ -25,7 +25,8 @@
             "when": [
                     {
                 "type": "button",
-                "loc": "id:b"
+                "loc": "id:b",
+                "action": "click"
                 }
             ],
             "then": [
