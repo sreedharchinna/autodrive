@@ -9,7 +9,9 @@
   ],
   "then": [
     {
-      "title": "Google"
+      "type": "titletext",
+      "value": "Google",
+      "action": "equal"
     }
   ],
   "next": [
