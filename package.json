@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "jasmine": "^2.4.1",
+    "jasmine-node": "^1.14.5",
     "json-parser": "^1.1.5",
     "json-query": "^1.5.0",
     "jsonlint": "^1.6.2",
