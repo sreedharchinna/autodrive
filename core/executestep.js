@@ -3,8 +3,14 @@ var webdriver = require('selenium-webdriver'),
     until = require('selenium-webdriver').until;
 //    test = require('../testing');
 
+// For Firefox browser
+//var driver = new webdriver.Builder()
+//    .forBrowser('firefox')
+//    .build();
+
+// For chrome browser
 var driver = new webdriver.Builder()
-    .forBrowser('firefox')
+    .forBrowser('chrome')
     .build();
 
 var runstep = {
